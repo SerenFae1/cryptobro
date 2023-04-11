@@ -1,66 +1,57 @@
-.cryptoRow {
-    background-color: rgb(58, 55, 55);
+.titleRow {
+    background-color: black;
     border: 1px solid black;
     border-radius: 0.25rem;
     display: flex;
+    font-weight: bold;
     justify-content: space-between;
-    margin: 0.2rem;
-    padding: 1rem;
+    margin: 0.2rem 0.2rem 0.5rem 0.2rem;
+    padding: 0.5rem 1rem;
 }
-
-.cryptoRow:nth-child(odd) {
-    background-color: rgb(80, 77, 77);
-}
-
-.cell {
+  
+.titleCell {
     flex: 1;
 }
-
-.rank {
+  
+.titleRank {
     flex: 0.5;
 }
-
-.name img {
-    padding-right: 1rem;
-    vertical-align: middle;
-    width: 1.5rem;
-}
-
-.price {
+  
+.titlePrice {
     text-align: right;
 }
-
-.oneHour {
+  
+.titleOneHour {
     flex: 0.5;
     text-align: right;
 }
-
-.twentyFourHours {
+  
+.title24Hours {
     flex: 0.5;
     text-align: right;
 }
-
-.sevenDays {
+  
+.titleSevenDays {
     flex: 0.5;
     text-align: right;
 }
-
-.volume {
+  
+.titleVolume {
     text-align: right;
 }
-
-.marketCap {
+  
+.titleMarketCap {
     text-align: right;
 }
 
 @media screen and (max-width: 1120px) {
-    .marketCap {
+    .titleMarketCap {
         display: none;
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .volume {
+    .titleVolume {
         display: none;
     }
 }

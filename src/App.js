@@ -1,35 +1,31 @@
-import { useEffect, useState } from 'react';
+import {useState, useEffect} from 'react';
 import axios from 'axios';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import 'swiper/css';
 
 import './App.css';
-import { CryptoRow } from './components/CryptoRow';
-import { CryptoCard } from './components/CryptoCard';
-import { RowView } from './components/RowView';
-import { CardView } from './components/CardView';
-import { Swiper, SwiperSlide } from 'swiper/react';
-// import data from './data';
+import CryptoRow from './components/CryptoRow';
+import CryptoCard from './components/CryptoCard';
+import RowView from './components/RowView';
+import CardView from './components/CardView';
 
 
 function App() {
-
-  const [ coinData, setCoinData ] = useState(null);
-  const [ compact, setCompact ] = useState(false);
+  const [data, setData] = useState(null);
+  const [compact, setCompact] = useState(null);
 
   useEffect( () => {
-
     axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=1h%2C24h%2C7d')
     .then(function (response) {
       console.log(response);
-      setCoinData(response.data);
+      setData(response.data);
     })
     .catch(function (error) {
       console.log(error);
     });
-
   }, [] );
-
-
-  useEffect( () => {
+  
+  useEffect(() => {
     function handleResize() {
       let width = window.innerWidth;
 
@@ -43,10 +39,10 @@ function App() {
     window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
-
   }, [] );
 
-  if(coinData === null) {
+  if(data === null)
+  {
     return(
       <div>
         <h1>Loading...</h1>
@@ -55,12 +51,12 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h2>Top {coinData.length} Coins</h2>
-
-      { compact ? ( <CardView coins={coinData} /> ) : ( <RowView coins={coinData} /> ) }
-      
-
+    <div className='App'>
+      { <div className='swiper-container'>
+        
+      </div> }
+      <h2>Top {data.length} Coins</h2>
+      { compact ? (<CardView coins={data}/>) : (<div className='rowContainer'><RowView coins={data}/></div>) }
     </div>
   );
 }

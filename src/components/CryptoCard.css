@@ -1,12 +1,110 @@
 .cryptoCard {
+    background-color: rgb(58, 55, 55);
+    border: .15rem solid rgb(112, 109, 109);
+    border-radius: .35rem;
+    color: white;
     display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    min-height: 10.5rem;
+    width: 600px;
+}
 
-    min-width: 480px;
-    width: 100%;
+.left {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem 2rem;
+}
 
-    border: #333 1px solid;
-    border-radius: 5px;
-    padding: 1rem;
+.cardRank {
+    align-items: center;
+    background-color: rgb(112, 112, 112);
+    border-radius: 50%;
+    box-shadow: 0 .15rem .4rem rgba(0, 0, 0, 0.25);
+    color: white;
+    display: flex;
+    font-family: "Open Sans";
+    font-size: 1.5rem;
+    font-weight: 600;
+    height: 2rem;
+    justify-content: center;
+    padding: .5rem;
+    width: 2rem;
+}
 
-    margin-bottom: 2rem;
+.cardIcon {
+    margin: 2rem 0 1rem 0;
+}
+
+.cardIcon img {
+    max-width: 8rem;
+}
+
+.cardPrice {
+    background-color: rgb(112, 112, 112);
+    border-radius: .2rem;
+    box-shadow: 0 .15rem .4rem rgba(0, 0, 0, 0.25); 
+    color: white;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: .2rem .5rem .3rem .5rem;
+}
+
+.right {
+    background-color: rgb(73, 70, 70);
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding: 1.5rem 2rem;
+}
+
+.cardName {
+    font-family: "Open Sans";
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.rightMiddle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 2rem 0 1rem 0;
+}
+
+.rightSection {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.changeLabel {
+    font-weight: lighter;
+}
+
+.change {
+    font-family: "Open Sans";
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.rightBottom {
+    margin-top: .5rem;
+}
+
+.rightBottomSection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottomValue {
+    font-family: "Open Sans";
+    font-weight: bold;
 }

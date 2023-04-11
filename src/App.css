@@ -1,5 +1,11 @@
-.App {
-  width: 85%;
-  margin: auto;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans');
+
+body {
+  background-color: rgb(29, 27, 27);
+  color: white;
+  font-family: "PT Sans";
 }
 
+.rowContainer {
+  margin: 1.5rem 7rem;
+}

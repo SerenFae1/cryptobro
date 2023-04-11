@@ -1,27 +1,33 @@
-import React from 'react'
-import { CryptoRow } from './CryptoRow'
+import './RowView.css';
+import TitleRow from './TitleRow';
+import CryptoRow from './CryptoRow';
 
-export const RowView = (props) => {
-  return (
-    <>
-      <div className='coinRow'>
-        <div className='coinMC'>Rank</div>
-        <div className='coinIMG'></div>
-        <div className='coinName'>Name</div> 
-        <div className='coinSym'></div>
-        <div className='coinPrice'>Price</div>
-        <div className='coin1h'>1h %</div>
-        <div className='coin24h'>24h %</div>
-        <div className='chart'></div>
-        <div className='coin7d'>7d %</div>
-        <div className='volume'>Volume (24h)</div>
-        <div className='marketCap'>Market Cap</div>
-      </div>
 
-      { props.coins.map( (coin) => {
-        return ( <CryptoRow coin={coin} /> )
-      } ) }
 
-    </>
-  )
+const RowView = (props) => {
+    return(
+        <>
+            <TitleRow/>
+            {
+            props.coins.map((coin) => {
+                return (
+                <CryptoRow
+                    rank={coin.market_cap_rank}
+                    image={coin.image}
+                    name={coin.name}
+                    price={coin.current_price}
+                    oneHour={coin.price_change_percentage_1h_in_currency}
+                    oneDay={coin.price_change_percentage_24h_in_currency}
+                    sevenDays={coin.price_change_percentage_7d_in_currency}
+                    volume={coin.total_volume}
+                    marketCap={coin.market_cap}
+                />
+                )
+            })
+            }
+        </>
+    );
 }
+
+
+export default RowView;
