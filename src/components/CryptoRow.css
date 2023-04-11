@@ -1,0 +1,113 @@
+.coinRow {
+    display: flex;
+    padding: 1em;
+    border-top: 1px grey solid;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+}
+
+.coinMC {
+    width: 40px;
+}
+
+.coinIMG img {
+    width: 18px;
+    height: auto;
+}
+
+.coinIMG {
+    min-width: 18px;
+    margin-left: 2em;
+}
+
+.coinSym {
+    margin-left: 2em;
+    width: 40px;
+}
+
+.coinName {
+    margin-left: 2em;
+    min-width: 125px;
+    /* flex: 1; */
+}
+
+.coinPrice {
+    margin-left: 2em;
+    text-align: right;
+    min-width: 150px;
+    flex: 1;
+}
+
+.coin1h {
+    margin-left: 1em;
+    text-align: right;
+    min-width: 50px;
+}
+
+.coin24h {
+    margin-left: 1em;
+    text-align: right;
+    min-width: 50px;
+}
+
+.coin7d {
+    margin-left: 1em;
+    text-align: right;
+    min-width: 50px;
+}
+
+.chart {
+    margin-left: 1em;
+    min-width: 130px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.volume {
+    margin-left: 1em;
+    text-align: right;
+    min-width: 150px;
+    flex: 1;
+}
+
+.marketCap {
+    margin-left: 1em;
+    text-align: right;
+    min-width: 150px;
+    flex: 1;
+}
+
+
+@media screen and (max-width: 1390px) {
+    .chart {
+        display: none;
+    }
+
+    .coin1h {
+        flex: 1;
+    }
+
+    .coin24h {
+        flex: 1;
+    }
+
+    .coin7d {
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .marketCap {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .volume {
+        display: none;
+    }
+
+}

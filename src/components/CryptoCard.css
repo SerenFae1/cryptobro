@@ -1,0 +1,12 @@
+.cryptoCard {
+    display: flex;
+
+    min-width: 480px;
+    width: 100%;
+
+    border: #333 1px solid;
+    border-radius: 5px;
+    padding: 1rem;
+
+    margin-bottom: 2rem;
+}
