@@ -1,45 +1,49 @@
 .titleRow {
-    background-color: black;
-    border: 1px solid black;
-    border-radius: 0.25rem;
+    background-color: #110B13;
     display: flex;
-    font-weight: bold;
     justify-content: space-between;
-    margin: 0.2rem 0.2rem 0.5rem 0.2rem;
-    padding: 0.5rem 1rem;
+    padding: 10px 1.25rem;
 }
-  
+
 .titleCell {
     flex: 1;
+    font-family: "Chivo Mono";
 }
-  
-.titleRank {
-    flex: 0.5;
+
+.titleName {
+    flex: 1;
 }
-  
+
 .titlePrice {
     text-align: right;
 }
-  
+
 .titleOneHour {
     flex: 0.5;
     text-align: right;
 }
-  
+
 .title24Hours {
     flex: 0.5;
     text-align: right;
 }
-  
+
+.titleChart{
+    margin-left: 1em;
+    min-width: 130px;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .titleSevenDays {
     flex: 0.5;
     text-align: right;
 }
-  
+
 .titleVolume {
     text-align: right;
 }
-  
+
 .titleMarketCap {
     text-align: right;
 }

@@ -55,7 +55,7 @@ function App() {
       { <div className='swiper-container'>
         
       </div> }
-      <h2>Top {data.length} Coins</h2>
+      <h2 className='big-heading'>Top {data.length} Coins</h2>
       { compact ? (<CardView coins={data}/>) : (<div className='rowContainer'><RowView coins={data}/></div>) }
     </div>
   );

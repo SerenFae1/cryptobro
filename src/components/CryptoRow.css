@@ -1,29 +1,26 @@
 .cryptoRow {
-    background-color: rgb(58, 55, 55);
-    border: 1px solid black;
-    border-radius: 0.25rem;
+    background-color: #48394C;
     display: flex;
     justify-content: space-between;
-    margin: 0.2rem;
-    padding: 1rem;
+    padding: 1.25rem;
 }
 
 .cryptoRow:nth-child(odd) {
-    background-color: rgb(80, 77, 77);
+    background-color: #625665;
 }
 
 .cell {
     flex: 1;
 }
 
-.rank {
-    flex: 0.5;
+.name {
+    flex: 1;
 }
 
 .name img {
-    padding-right: 1rem;
+    padding-right: 10px;
     vertical-align: middle;
-    width: 1.5rem;
+    width: 35px;
 }
 
 .price {
@@ -43,6 +40,13 @@
 .sevenDays {
     flex: 0.5;
     text-align: right;
+}
+
+.chart {
+    margin-left: 1em;
+    min-width: 130px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .volume {

@@ -1,11 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Chivo+Mono|Anuphan');
 
 body {
-  background-color: rgb(29, 27, 27);
+  background-color: rgb(46, 29, 50);
   color: white;
-  font-family: "PT Sans";
+  font-family: "Anuphan";
+}
+
+.big-heading {
+  text-align: center;
+  margin-top: 40px;
+  font-family: "Chivo Mono";
 }
 
 .rowContainer {
-  margin: 1.5rem 7rem;
+  margin: 30px 50px;
 }
